@@ -45,7 +45,7 @@ const MobileNav = () => {
             <SheetContent className='' >
                 <div className='mt-20 mb-20 text-center text-2xl'>
                     <Link onClick={handleClick} href='/'>
-                        <h1>Minhaj<span className='text-accent'>.mm</span></h1>
+                        <h1>Abis<span className='text-accent'>.V</span></h1>
                     </Link>
                 </div>
                 < nav className='flex flex-col gap-8 justify-center items-center' >

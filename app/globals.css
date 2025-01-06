@@ -18,6 +18,11 @@
     }
 }
 
+html, body {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    height: 100%;         /* Ensure the height is 100% of the viewport */
+  }  
+
 
 .custom-filter {
   filter: grayscale(70%) brightness(95%);

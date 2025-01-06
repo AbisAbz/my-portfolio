@@ -1,21 +1,26 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 import Link from "next/link";
 
-const mediaLinks= [
-    {
-icon:<FaGithub/>,
-path:"https://github.com/Minhaj99466"
-},
-    {
-icon:<FaLinkedin/>,
-path:"https://linkedin.com/in/minhaj-mm"
-},
-    {
-icon:<FaWhatsapp/>,
-path:"https://wa.me/9946631792"
-},
-]
+const mediaLinks = [
+  {
+    icon: <FaGithub />,
+    path: "https://github.com/AbisAbz"
+  },
+  {
+    icon: <FaLinkedin />,
+    path: "https://www.linkedin.com/in/abis-v/"
+  },
+  {
+    icon: <FaWhatsapp />,
+    path: "https://wa.me/7034709529"
+  },
+  {
+    icon: <FaInstagram />,
+    path: "https://www.instagram.com/abis_abz/"  // Replace 'yourInstagramHandle' with your actual Instagram username
+  }
+];
+
 
 const Social = ({containerStyles,iconStyles}) => {
     return (

@@ -1,143 +1,222 @@
-"use client"
+"use client";
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { useState } from "react"
-import { BsArrowUpRight, BsGithub } from "react-icons/bs"
-import { Swiper, SwiperSlide } from "swiper/react"
-import 'swiper/css';
-import Image from "next/image"
-import WorkSliderBtns from "@/components/WorkSliderBtns"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaNodeJs,
+  FaBootstrap,
+  FaAws,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiMongodb,
+  SiTailwindcss,
+  SiExpress,
+  SiRazorpay,
+  SiTypescript,
+} from "react-icons/si";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Image from "next/image";
 
 const work = [
   {
     num: "01",
-    name: 'Football(E-Commerce)',
-    description: "Built an e-commerce site for branded footballs with a clean interface, secure payments, responsive design, and seamless shopping.",
+    name: "Pet Food (E-Commerce)",
+    description:
+      "Developed a robust e-commerce platform tailored for pet food, offering a user-friendly interface, secure payment integration, and mobile-responsive design. The site ensures seamless browsing, optimized product categorization, and an efficient checkout process to enhance user experience.",
     stack: [
-      { name: 'html 5' },
-      { name: 'css3' },
-      { name: 'node.js' },
-      { name: 'bootstrap' },
-      { name: 'express.js' },
+      { name: "html 5" },
+      { name: "css3" },
+      { name: "node.js" },
+      { name: "javascript" },
+      { name: "Mongodb" },
+      { name: "Bootstrap" },
+      { name: "express.js" },
+      { name: "RazorPay" },
+      { name: "AWS" },
+      { name: "EC2" },
+      { name: "GitHub" },
     ],
-    image: '/assets/work/Screenshot 2024-01-16 094306.png',
-    live: 'http://kurrah.shop/',
-    github: 'https://github.com/Minhaj99466/E-commerce.git',
+    images: ["/assets/work/Pet-Food.png", "/assets/work/Pet-Food(2).png"],
+    live: "http:/petfood.shop/",
+    github: "https://github.com/AbisAbz/Ecommerce-First-Project",
   },
   {
     num: "02",
-    name: 'Hiring Website',
-    description: "Developed a hiring platform for artists, featuring job listings, artist profiles, real-time chat, and secure application management.",
+    name: "Car Washing Website",
+    description:
+      "Designed and developed a dynamic car washing service platform enabling users to schedule appointments, select packages, and make secure online payments. The website features a mobile-responsive design, real-time slot management, and integration of customer reviews to enhance user experience and engagement.",
     stack: [
-      { name: 'html 5' },
-      { name: 'css3' },
-      { name: 'node.js' },
-      { name: 'bootstrap' },
-      { name: 'express.js' },
+      { name: "html 5" },
+      { name: "css3" },
+      { name: "node.js" },
+      { name: "javascript" },
+      { name: "express.js" },
+      { name: "react.js" },
+      { name: "mongodb" },
+      { name: "material tailwind" },
+      { name: "tailwind css" },
+      { name: "GitHub" },
     ],
-    image: '/assets/work/Screenshot 2024-09-08 180212.png',
-    live: 'https://the-art-studio-client-side-89lzweyb7-minhajs-projects.vercel.app/',
-    github: 'https://github.com/Minhaj99466/THE-ART-STUDIO-SERVER-SIDE.git',
+    images: ["/assets/work/car-washing.png"],
+    live: "http:/wax.warrior/",
+    github: "https://github.com/AbisAbz/WAX-WARRIORS-Client-Side",
   },
   {
     num: "03",
-    name: 'Solar(E-commerce)',
-    description: "Built an e-commerce site for solar panels with an integrated calculator to estimate panel needs. ",
+    name: "Dmax Dental Care",
+    description:
+      "Developed a comprehensive dental care management platform for DMax Dental Care, featuring patient appointment scheduling, treatment history tracking, and payment processing. The platform enables seamless communication between patients and dental professionals, integrates patient records securely, and simplifies administrative tasks. Additionally, the system provides real-time analytics for staff to manage clinic operations efficiently, ensuring exceptional care delivery.",
     stack: [
-      { name: 'html 5' },
-      { name: 'css3' },
-      { name: 'node.js' },
-      { name: 'bootstrap' },
-      { name: 'express.js' },
+      { name: "node.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Next.js" },
+      { name: "GitHub" },
     ],
-    image: '/assets/work/Screenshot 2024-09-08 182143.png',
-    live: '',
-    github: 'https://github.com/Minhaj99466/Typhoon.git',
+    images: ["/assets/work/Dmax.png"],
+    live: "https://dmax.eenth.com/signin?callbackUrl=https%3A%2F%2Fdmax.eenth.com%2Fconsultation",
+    github: "https://github.com/AbisAbz?tab=repositories",
   },
-]
+  {
+    num: "04",
+    name: "RealDent Surgical Equipments",
+    description:
+      "Developed a robust e-commerce platform for RealDent Surgical Equipments, facilitating seamless purchasing and sales operations. The platform streamlines the management of inventory, purchase orders, and sales data, enabling efficient tracking of surgical equipment. Features include secure data integration for supplier and customer records, automated invoice generation, and real-time stock updates. Additionally, the system provides comprehensive analytics, helping administrators monitor sales trends and optimize inventory levels, ensuring a smooth and reliable user experience for both suppliers and customers.",
+    stack: [
+      { name: "node.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Next.js" },
+      { name: "GitHub" },
+    ],
+    images: ["/assets/work/realDent.png"],
+    live: "https://realdent.eenth.com/surgicals",
+    github: "https://github.com/AbisAbz?tab=repositories",
+  },
+];
+
+const iconMap = {
+  "html 5": <FaHtml5 className="text-white text-sm" />,
+  css3: <FaCss3Alt className="text-white text-sm" />,
+  "node.js": <FaNodeJs className="text-white text-sm" />,
+  javascript: <FaJsSquare className="text-white text-sm" />,
+  "express.js": <FaNodeJs className="text-white text-sm" />,
+  "react.js": <FaReact className="text-white text-sm" />,
+  mongodb: <SiMongodb className="text-white text-sm" />,
+  "material tailwind": <SiTailwindcss className="text-white text-sm" />,
+  "tailwind css": <SiTailwindcss className="text-white text-sm" />,
+  Bootstrap: <FaBootstrap className="text-white text-sm" />,
+  RazorPay: <SiRazorpay className="text-white text-sm" />,
+  AWS: <FaAws className="text-white text-sm" />,
+  EC2: <FaAws className="text-white text-sm" />,
+  GitHub: <BsGithub className="text-white text-sm" />,
+  TypeScript: <SiTypescript className="text-white text-sm" />,
+  "Next.js": <SiNextdotjs className="text-white text-sm" />,
+};
 
 const WorkPage = () => {
-  const [project, setProject] = useState(work[0])
+  const [project, setProject] = useState(work[0]);
 
-  const handleSlideChange=(swiper)=>{
-    const currentSlide=swiper.activeIndex;
-    setProject(work[currentSlide])
-  }
+  const handleSlideChange = (swiper) => {
+    const currentSlide = swiper.activeIndex;
+    setProject(work[currentSlide]);
+  };
 
   return (
-    <motion.div className="min-h-[80vh] flex flex-col  justify-center py-12 xl:px-0" initial={{ opacity: 0 }} animate={{ opacity: 1,transition:{delay:2.4, ease:'easeIn', duration:0.4} }}>
+    <motion.div
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.2, ease: "easeIn", duration: 0.4 } }}
+    >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px] ">
-          <div className="w-full xl:w-[50%] xl:h-[460px]  flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
-              <h3 className="
-              text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.name}</h3>
-              <p className="text-white/60">{project.description}</p>
-              <ul className="flex flex-wrap gap-4 text-accent">
-                {project.stack.map((item, index) => (
-                  <li key={index}>{item.name}
-                    {index !== project.stack.length - 1 && ','}
-                  </li>
-
-
-                ))}
-              </ul>
-              <div className="border border-white/20"></div>
-              <div className="flex items-center gap-4 ">
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Visit Git</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-
+        <div className="flex flex-col gap-16">
+          {work.map((project, index) => (
+            <div key={index} className="flex flex-col xl:flex-row gap-8">
+              <div className="w-full xl:w-[50%] flex flex-col justify-between">
+                <div className="flex flex-col gap-[30px]">
+                  <div className="text-8xl font-extrabold text-transparent text-outline">
+                    {project.num}
+                  </div>
+                  <h3 className="text-[42px] font-bold text-white">{project.name}</h3>
+                  <p className="text-white/60">{project.description}</p>
+                  <ul className="flex flex-wrap gap-4 text-accent">
+                    {project.stack.map((item, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        {iconMap[item.name]} {item.name}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="border border-white/20"></div>
+                  <div className="flex items-center gap-4">
+                    {project.live && (
+                      <Link href={project.live}>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger className="rounded-full bg-white/5 p-4">
+                              <BsArrowUpRight className="text-white text-3xl" />
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Live Project</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </Link>
+                    )}
+                    <Link href={project.github}>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger className="rounded-full bg-white/5 p-4">
+                            <BsGithub className="text-white text-3xl" />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Visit Git</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full xl:w-[50%]">
+                <Swiper
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  loop={true}
+                  onSlideChange={handleSlideChange}
+                >
+                  {project.images.map((image, idx) => (
+                    <SwiperSlide key={idx}>
+                      <div className="relative w-full h-full">
+                        <Image
+                          loading="lazy"
+                          height={340}
+                          width={960}
+                          src={image}
+                          alt={`work-image-${idx}`}
+                          className="object-fill"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
-          </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            onSlideChange={handleSlideChange}
-            className="xl:h-[460px] mb-12 xl:mb-0">
-              {work.map((item,index)=>(
-                <SwiperSlide className="w-full" key={index}>
-                  <div className=" relative group flex justify-center items-center bg-pink-50/0">
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 "></div>
-                  <div className="relative w-full h-full">
-                    <Image  loading="lazy"  height={340} width={960}  src={item.image} alt="work-image" className="object-fill"/>
-                  </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-20 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-44px] flex justify-center items-center transition-all"/>
-            </Swiper>
-          </div>
+          ))}
         </div>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default WorkPage
+export default WorkPage;

@@ -9,9 +9,25 @@ import {
   FaNodeJs,
   FaJsSquare,
   FaBootstrap,
-  FaDatabase
+  FaDatabase,
+  FaGithub
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiMongodb,
+  SiTailwindcss,
+  SiExpress,
+  SiPostman,
+  SiFirebase,
+  SiEslint,
+  SiAmazonaws,
+  SiCloudinary,
+  SiHostinger,
+  SiDatabricks,
+  SiMaterialdesign
+} from "react-icons/si";
 import { delay, motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -24,11 +40,11 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Minhaj mm",
+      fieldValue: "Abis V",
     },
     {
       fieldName: "Phone",
-      fieldValue:"(+91) 9946631792",
+      fieldValue:"(+91) 7034709529",
     },
     {
       fieldName: "Nationality",
@@ -36,7 +52,7 @@ const about = {
     },
     {
       fieldName: "Email",
-      fieldValue: "minhaj9946@gmail.com",
+      fieldValue: "abisabz529@gmail.com",
     },
     {
       fieldName: "Freelance",
@@ -44,7 +60,7 @@ const about = {
     },
     {
       fieldName: "Language",
-      fieldValue: "English,Malayalam,Tamil",
+      fieldValue: "English,Malayalam,Tamil,Hindi",
     },
   ],
 };
@@ -56,19 +72,14 @@ const experience = {
    " Explore my experience to see how I’ve contributed to various teams and projects with skill and innovation.",
   items: [
     {
-      company: "Freelancer",
-      position: "Full Stack Developer",
-      duration: "2024 - present",
+      company: "Eenth Inovation ",
+      position: "Full Stack Developer[Mern-Stack]",
+      duration: "2024 -Present",
     },
     {
-      company: "Innobyte Services",
-      position: "Full Stack Developer",
-      duration: "2024 -2024",
-    },
-    {
-      company: "Brototype",
-      position: "Full Stack Developer",
-      duration: "2023 -2024",
+      company: "Bootcamp @ Kinfra Techno  Park",
+      position: "Full Stack Developer[Mern-Stack]",
+      duration: "2022 -2024",
     },
   ],
 };
@@ -78,67 +89,110 @@ const education = {
   description:"A journey through various educational experiences provided me deep understanding and practical skills in this field. Each step in my education has contributed to my growth and expertise.",
   items: [
     {
-      institution: "Bootcamp",
-      degree: "Full Stack Developer",
-      duration: "2023 -2024",
+      institution: "KMCT College of Engineering",
+      degree: "KTU University",
+      subject: "Computer Science Engineering",
     },
     {
-      institution: "Accounting Society",
-      degree: "Accountant",
-      duration: "2022 -2023",
+      institution: "St.Paul'sEMHSS",
+      degree: "Higher Secondary",
+      subject: "Computer Science",
     },
     {
-      institution: "Mhes College Vadakara",
-      degree: "Bachelor of Commerce",
-      duration: "2018-2021",
-    },
-    {
-      institution: "Emjay Vhse",
-      degree: "Higher secondary",
-      duration: "2016-2018",
+      institution: "RAC Higher Secondary School",
+      degree: "Secondary Education",
     },
   ],
 };
 
 const skills = {
-  title: "My skills",
+  title: "My Skills",
   description:
     "My expertise spans full-stack development, problem-solving, and innovative solutions, enabling me to tackle complex projects effectively.",
   skillList: [
     {
       icon: <FaHtml5 />,
-      name: "html 5",
+      name: "HTML5",
     },
     {
       icon: <FaCss3 />,
-      name: "css3",
+      name: "CSS3",
     },
     {
       icon: <FaNodeJs />,
-      name: "node.js",
+      name: "Node.js",
     },
     {
       icon: <FaReact />,
-      name: "react.js",
+      name: "React.js",
     },
     {
       icon: <SiNextdotjs />,
-      name: "next.js",
+      name: "Next.js",
     },
     {
       icon: <SiTailwindcss />,
-      name: "tailwind.css js",
+      name: "Tailwind CSS",
     },
     {
       icon: <FaJsSquare />,
-      name: "Javascript",
+      name: "JavaScript",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "TypeScript",
     },
     {
       icon: <FaFigma />,
       name: "Figma",
     },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <SiDatabricks />,
+      name: "Data Structures",
+    },
+    {
+      icon: <SiExpress />,
+      name: "Express.js",
+    },
+    {
+      icon: <SiPostman />,
+      name: "Postman",
+    },
+    {
+      icon: <SiFirebase />,
+      name: "Firebase",
+    },
+    {
+      icon: <SiEslint />,
+      name: "ESLint",
+    },
+    // {
+    //   icon: <SiAmazonaws />,
+    //   name: "AWS",
+    // },
+    {
+      icon: <FaGithub />,
+      name: "GitHub",
+    },
+    {
+      icon: <SiCloudinary />,
+      name: "Cloudinary",
+    },
+    {
+      icon: <SiHostinger />,
+      name: "Hostinger",
+    },
+    {
+      icon: <SiMaterialdesign />,
+      name: "Material Tailwind",
+    },
   ],
 };
+
 
 const Resume = () => {
   return (
@@ -194,7 +248,7 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] ">
                     {education.items.map((item, index) => (
                       <li key={index} className="bg-[#232329] h-[160px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                        <span className="text-accent">{item.duration}</span>
+                        <span className="text-accent">{item.subject}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                         <div className="flex items-center gap-3">
                           <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
@@ -211,30 +265,32 @@ const Resume = () => {
             {/* Skills */}
 
             <TabsContent value='skills' className="w-full h-full">
-              <div className="flex flex-col gap-[30px] ">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-2xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[500px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+  <div className="flex flex-col gap-[30px] ">
+    <div className="flex flex-col gap-[30px] text-center xl:text-left">
+      <h3 className="text-2xl font-bold">{skills.title}</h3>
+      <p className="max-w-[500px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+    </div>
+    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+      {skills.skillList.map((item, index) => (
+        <li key={index} className="flex flex-col items-center">
+          <TooltipProvider delayDuration={100}>
+            <Tooltip>
+              <TooltipTrigger className="bg-[#232329] gap-1 h-[150px] w-full rounded-lg flex justify-center items-center group">
+                <div className="text-6xl group-hover:accent transition-all duration-500 group-hover:text-accent">{item.icon}</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <div className="flex flex-col items-center">
+                  <p className="capitalize">{item.name}</p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4  xl:gap-[30px] ">
-                  {skills.skillList.map((item, index) => (
-                    <li key={index} >
-                     <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className="bg-[#232329] gap-1 h-[150px] w-full rounded-lg flex justify-center items-center group">
-                          <div className="text-6xl group-hover:accent transition-all duration-500 group-hover:text-accent">{item.icon}</div>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p className="capitalize">{item.name}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                     </TooltipProvider>
-                    
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </TabsContent>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </li>
+      ))}
+    </ul>
+  </div>
+</TabsContent>
+
 
             {/* about me */}
 
