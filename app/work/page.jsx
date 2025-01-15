@@ -48,7 +48,7 @@ const work = [
       { name: "GitHub" },
     ],
     images: ["/assets/work/Pet-Food.png", "/assets/work/Pet-Food(2).png"],
-    live: "http:/petfood.shop/",
+    live: "http:/mafoods.shop/",
     github: "https://github.com/AbisAbz/Ecommerce-First-Project",
   },
   {
