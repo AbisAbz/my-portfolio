@@ -7,8 +7,8 @@ import StairTransition from "@/components/StairTransition";
 const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700', '800'], variable: '--font-jetbrainsMono' });
 
 export const metadata = {
-  title: "Minhaj | Personal Portfolio",
-  description: "Minhaj is a full-stack developer with 1.5 year experience.",
+  title: "Abis | Personal Portfolio",
+  description: "Abis is a full-stack developer with 2 years experience.",
 };
 
 export default function RootLayout({ children }) {
