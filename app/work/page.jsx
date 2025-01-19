@@ -90,7 +90,7 @@ const work = [
   },
   {
     num: "04",
-    name: "RealDent Surgical Equipments",
+    name: "ERP Software",
     description:
       "Developed a robust e-commerce platform for RealDent Surgical Equipments, facilitating seamless purchasing and sales operations. The platform streamlines the management of inventory, purchase orders, and sales data, enabling efficient tracking of surgical equipment. Features include secure data integration for supplier and customer records, automated invoice generation, and real-time stock updates. Additionally, the system provides comprehensive analytics, helping administrators monitor sales trends and optimize inventory levels, ensuring a smooth and reliable user experience for both suppliers and customers.",
     stack: [
